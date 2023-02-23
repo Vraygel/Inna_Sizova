@@ -53,7 +53,7 @@ html {
     width: 1440px;
     margin: 0 auto;
     background-repeat: no-repeat;
-padding-bottom: 100px;
+    background-color: #F5F5F5; 
 }
 
 .header {
@@ -107,6 +107,10 @@ padding-bottom: 100px;
 
 .telegram {
     background-color: #0088CC;
+}
+
+.telegram img {
+    margin-right: 2px;
 }
 
 .vk {
@@ -223,29 +227,35 @@ padding-bottom: 100px;
     top: 0;
     height: 100%;
     width: 45px;
-    transform: skewX(-45deg);
-    animation: flareAnimation;
+    animation-name: menu;
     left: -150%;
+    transform: skewX(-45deg);
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
-    animation: flareAnimation 3s infinite linear;
+    /* animation: infinite linear; */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+    /* animation-duration: 3s;/ */
+   animation-delay: 5s;
+    /* animation-play-state: paused, running, running; */
+    /* animation-delay: 5s; */
 }
 
 
 
-@keyframes flareAnimation {
-    0% {
-        left: -150%;
-    }
-
-    100% {
+@keyframes menu {
+    16.66%, 100% {
         left: 150%;
     }
+/* 
+    100% {
+        left: 150%;
+    } */
 }
 
 .main {
     border-top: 1px solid #C2BA95;
     margin-top: 30px;
-    background: #F7F8FC;
     padding-bottom: 150px;
 }
 
@@ -397,7 +407,7 @@ color: #000000;
     position: relative;
 z-index: 10;
 top: 54px;
-background: #F7F8FC;
+background-color: #F5F5F5;
 }
 
 
@@ -406,21 +416,83 @@ background: #F7F8FC;
     height: 100px;
 }
 
-.brand{
+
+
+
+
+.services{
+    margin-top: 100px;
+    height: 394px;
+    display: flex;
+    overflow: hidden;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.services_item{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     background-image: url(./img/brand_fon.png);
+    width: 100%;
     padding-left: 431px;
     padding-right: 140px;
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-top: 100px;
     box-shadow: 0px 12px 12px -12px rgb(12 12 13 / 21%), 0px -12px 12px -12px rgb(12 12 13 / 21%);
 }
+
+.web, .poli, .brand{
+    cursor: pointer;
+position: absolute;
+top: 400px;
+animation-name: up;
+
+}
+
+.anim{
+    animation-name: up;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: ease-out; */
+    /* animation-fill-mode: forwards; */
+}
+    
+.poli{
+    animation-delay: 5s;
+}
+
+
+.web{
+    animation-delay: 10s;
+}
+
+@keyframes up { 
+0%{
+    top: 400px;
+}
+    20%, 30%{
+        top: 100px;
+        bottom: 100px;
+    }
+
+   60%{
+    /* opacity: 0.5; */
+    top: -400px;
+   }
+    100%{
+        top: -400px;
+    }
+}
+
+
 
 .brand .button{
     /* margin-left: 243px; */
 }
 
-.brand h1{
+.services_item h1{
     font-family: 'Montserrat700';
 font-style: normal;
 font-weight: 700;
@@ -432,12 +504,20 @@ background: linear-gradient(0deg, #C2BA95, #C2BA95);
 -webkit-text-fill-color: transparent;
 }
 
-.brand p{
+.services_item p{
     width: 471px;
 }
 
-.brand_wrap{
-    display: flex;
+.services_item_wrap:hover{
+    /* color: red; */
+    animation-play-state: paused;
+}
+
+
+
+
+.services_item_wrap{
+    /* display: flex; */
     align-items: flex-end;
     justify-content: space-between;
     font-family: 'Montserrat300';
@@ -472,17 +552,68 @@ color: #C2BA95;
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     width: 900px;
 }
 
-.ideas_item{
+.ideas_item, .shadow{
     width: 450px;
     height: 450px;
+    position: relative;
+    
 }
 
-.ideas_item_next{
-    margin-top: 100px;
+.shadow, .shadow_next{
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    box-shadow: inset 0 0 200px 0 #000000;
+    display: none;
+}
+
+
+.active_shadoe{
+    display: block;
+}
+
+.ideas_item h2, .ideas_item_next h2{
+    position: absolute;
+    z-index: 10;
+    left: 30px;
+    bottom: 30px;
+    text-align: left;
+    
+    font-family: 'Montserrat700';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 136.4%;
+    /* identical to box height, or 34px */
+    color: #FFFFFF;
+    display: none;
+}
+
+.width{
+    width: 250px;
+}
+
+
+
+.shadow_next{
     height: 900px;
+    width: 100%;
+}
+
+
+
+.ideas_item_next{
+    position: relative;
+    margin-top: 100px;
+    
+}
+
+.help_wrap{
+    padding-left: 140px;
 }
 
 .help{
@@ -494,7 +625,7 @@ color: #C2BA95;
     padding-left: 176px;
     padding-bottom: 75px;
     background-image: url(./img/fon.png);
-    background-size: 900px 318px;;
+    background-size: 1500px 318px;;
     background-repeat: no-repeat;
 
     /* background: #F7F8FC; */
@@ -578,3 +709,9 @@ color: #FFFFFF;
     margin-top: 27px;
     
 }
+
+
+
+
+
+
