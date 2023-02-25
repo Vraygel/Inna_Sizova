@@ -28,11 +28,11 @@ for (const iterator of services_item_wrap) {
 }
 
 help.addEventListener('mouseover', () => {
-    help.style.width = '100%';   
+    help.classList.remove('help_right') 
     })
     
     help.addEventListener('mouseout', () => {           
-        help.style.width = '60%';    
+        help.classList.add('help_right')   
     })
 
 
