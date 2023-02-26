@@ -369,6 +369,7 @@ html {
     /* or 22px */
     color: #FFFFFF;
     border: 0;
+    z-index: 10;
 }
 
 .about{
