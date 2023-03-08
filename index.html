@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <title>Inna Sizova</title>
 </head>
@@ -14,7 +15,16 @@
     <header class="header">
 
         <div class="heading">
-            <div class="soc">
+
+            <div class="heading_burger">
+          
+                <img class="up_revers" src="./img/Line_burger.png" alt="">
+                <img class="center_revers" src="./img/Line_burger.png" alt="">
+                <img class="down_revers" src="./img/Line_burger.png" alt="">
+
+            </div>
+
+            <div class="soc socNone ">
                 <div class="behance"><img class=" soc_img" src="./img/behance.png" alt=""></div>
                 <div class="whatsapp"><img class="soc_img" src="./img/whatsapp.png" alt=""></div>
                 <div class="telegram"><img class="soc_img" src="./img/telegram.png" alt=""></div>
@@ -33,12 +43,36 @@
 
         <div class="nav">
             <ul>
-                <li><a href="./index.html">Главная</a></li>
+                <li><a class="blackA" href="./index.html">Главная</a></li>
                 <li><a href="./services.html">Услуги</a></li>
                 <li><a href="./sites.html">Разработка сайтов</a></li>
                 <li><a href="./art.html">АРТ</a></li>
             </ul>
         </div>
+
+        <div class="navMobile upMenu">
+            <div class="navMobile_wrap">
+                <ul>
+                    <li><a class="blackA" href="./index.html">Главная</a></li>
+                    <li><a href="./services.html">Услуги</a></li>
+                    <li><a href="./sites.html">Разработка сайтов</a></li>
+                    <li><a href="./art.html">АРТ</a></li>
+                    <li><span>+7 977 710 38 56</span></li>
+                </ul>
+    
+                <div class="soc socMobile">
+                    <div class="behance"><img class=" soc_img" src="./img/behance.png" alt=""></div>
+                    <div class="whatsapp"><img class="soc_img" src="./img/whatsapp.png" alt=""></div>
+                    <div class="telegram"><img class="soc_img" src="./img/telegram.png" alt=""></div>
+                </div>
+            </div>
+            
+
+
+
+
+        </div>
+
 
         <div class="wrao_index">
             <div class="index">
@@ -46,10 +80,10 @@
                 <h2>Дизайнер коммуникаций, художник</h2>
                 <h1>Уникальный дизайн</h1>
                 <h1>для вашего бизнеса</h1>
-                <button>Заказать<span class="flare_span flare"></span></button>
+                <button class="order">Заказать<span class="flare_span flare"></span></button>
             </div>
         </div>
-        
+
 
     </header>
 
@@ -67,7 +101,7 @@
                 <h1>на первый заказ</h1>
                 <h2>Напиши мне в Wots app «Хочу скидку»</h2>
                 <h2>и опиши свою идею</h2>
-                <button class="button">Заказать</button>
+                <button class="button order" class="button">Заказать</button>
             </div>
         </div>
 
@@ -110,35 +144,35 @@
 
         </div>
 
-        </main>
+    </main>
 
 
-        <div class="services">
-            <div class="services_item">
-                <div class="services_item_wrap ">
-                </div>
-                <div class="services_item_wrap brand anim">
-                    <h1>Брендинг</h1>
-                    <p>Комплекс мероприятий <br> по 
-                         созданию целостного имиджа <br> вашей услуги, товара или компании</p>
-                </div>
-                <div class="services_item_wrap poli anim">
-                    <h1>Полиграфия</h1>
-                    <p>Разработка от дизайна листовок <br>
-                         до многостраничного каталога</p>
-                         <p style="opacity: 0;" ></p>
-                </div>
-                <div class="services_item_wrap web anim">
-                    <h1>Веб</h1>
-                    <p>Цифровое решение для бизнеса, <br>
-                         которое привлечет клиентов <br>
-                        и повысит узнаваемость</p>
-                </div>
-                <button class="button">Заказать</button>
+    <div class="services">
+        <div class="services_item">
+            <div class="services_item_wrap ">
             </div>
+            <div class="services_item_wrap brand anim">
+                <h1>Брендинг</h1>
+                <p>Комплекс мероприятий <br> по
+                    созданию целостного имиджа <br> вашей услуги, товара или компании</p>
+            </div>
+            <div class="services_item_wrap poli anim">
+                <h1>Полиграфия</h1>
+                <p>Разработка от дизайна листовок <br>
+                    до многостраничного каталога</p>
+                <p style="opacity: 0;"></p>
+            </div>
+            <div class="services_item_wrap web anim">
+                <h1>Веб</h1>
+                <p>Цифровое решение для бизнеса, <br>
+                    которое привлечет клиентов <br>
+                    и повысит узнаваемость</p>
+            </div>
+            <button class="button order">Заказать</button>
         </div>
+    </div>
 
-        <main class="main" >
+    <main class="main">
 
         <div class="ideas">
             <h1>Помогу воплотить ваши идеи в реальность</h1>
@@ -159,7 +193,7 @@
                     <img class="ideas_item_img" src="./img/ideas2.png" alt="">
                     <div class="shadow"></div>
                 </div>
-                <div class="ideas_item width">
+                <div class="ideas_item ">
                     <h2>Карточки для маркетплейсов</h2>
                     <img class="ideas_item_img" src="./img/ideas3.png" alt="">
                     <div class="shadow"></div>
@@ -174,7 +208,7 @@
 
 
     </main>
-    
+
     <div class="help_wrap">
         <div class="help">
             <h1>Хотите реализовать свой проект?</h1>
@@ -182,6 +216,34 @@
             <a href="https://tlgg.ru/@Sizova_Inna"><button class="button">Telegram</button></a>
             <a href="https://wa.me/+79777103856"><button class="button WhatsApp">WhatsApp</button></a>
             <!-- <img src="./img/fon.png" alt=""> -->
+        </div>
+    </div>
+
+
+
+    <div class="image_filter"></div>
+
+    <div class="feedback">
+        <div class="feedback_container">
+            <div class="feedback_close">
+                <img class="feedback_img" src="./img/Close.png" alt="">
+
+            </div>
+            <div class="feedback_h1">
+                <h1>Заполните форму</h1>
+            </div>
+            <div class="feedback_form">
+                <form class="form_tg" id="tg">
+                    <input class="input_tg" type="text" name="Name" id="" placeholder="Ваше имя ...">
+                    <input class="input_tg tel" type="tel" name="tel" id="" placeholder="Ваш телефон">
+                    <textarea class="input_tg" name="comment" id="" cols="30" rows="10"
+                        placeholder="Комментарий"></textarea>
+                    <input class="input_tg feedback_button" type="submit" value="Заказать">
+                </form>
+                <p>Нажимая на кнопку, вы даете согласие на <br>
+                    <a href="./soglashenie.html"><span>обработку своих персональных данных</span></a>
+                </p>
+            </div>
         </div>
     </div>
 
@@ -212,7 +274,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./app.js"></script>
 
 </body>
