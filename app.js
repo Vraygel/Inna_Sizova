@@ -14,6 +14,7 @@ let image_filter = document.querySelector('.image_filter')
 let input_tg = document.querySelectorAll('.input_tg')
 const tel = document.querySelector('.tel');
 let tg = document.querySelectorAll('#tg')
+let art = document.querySelector('.art')
 
 const TOKEN = '6234678894:AAEjs2mhQVH72DYnB8s3yFH1_UqnOJDXNFI'
 const CHAT_ID = '-1001836814367'
@@ -121,18 +122,27 @@ for (const iterator of services_item_wrap) {
 }
 
 
-for (const iterator of help) {
-    iterator.addEventListener('mouseover', () => {
-        iterator.classList.remove('help_right')
-    })
+// for (const iterator of help) {
+//     iterator.addEventListener('mouseover', () => {
+//         iterator.classList.remove('help_right')
+//     })
 
-    iterator.addEventListener('mouseout', () => {
-        iterator.classList.add('help_right')
-    })
-}
-
+//     iterator.addEventListener('mouseout', () => {
+//         iterator.classList.add('help_right')
+//     })
+// }
 
 try {
+
+
+    art.addEventListener('mouseover', () => {
+        art.classList.remove('right_art')
+    })
+    
+    art.addEventListener('mouseout', () => {
+        art.classList.add('right_art')
+    })
+    
 
     help_art.addEventListener('mouseover', () => {
         help_art.classList.remove('help_art_right')
@@ -162,13 +172,18 @@ for (const iterator of ideas_item_img) {
 
 }
 
+if (shadow_next) {
+    
+    shadow_next.addEventListener('mouseout', (event) => {
+        event.target.parentElement.firstElementChild.style.display = 'none';
+    
+        event.target.style.display = 'none';
+    
+    })
 
-shadow_next.addEventListener('mouseout', (event) => {
-    event.target.parentElement.firstElementChild.style.display = 'none';
+}
 
-    event.target.style.display = 'none';
 
-})
 
 
 for (const iterator of shadow) {
