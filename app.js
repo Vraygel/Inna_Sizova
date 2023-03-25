@@ -5,7 +5,7 @@ let ideas_item_img = document.querySelectorAll('.ideas_item_img')
 let help = document.querySelectorAll('.help')
 let help_art = document.querySelector('.help_art')
 let services = document.querySelector('.services')
-let anim = document.querySelector('.anim')
+let anim = document.querySelectorAll('.anim')
 let services_item_wrap = document.querySelectorAll('.services_item_wrap')
 let feedback_img = document.querySelector('.feedback_img')
 let feedback = document.querySelector('.feedback')
@@ -29,6 +29,19 @@ const TEL_REGEXP = /^(\+7)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]
 function validatePhone(value) {
     return TEL_REGEXP.test(value);
 }
+
+
+
+
+if (document.documentElement.clientWidth <= 768) {
+    for (const iterator of anim) {
+        iterator.classList.remove('anim')
+    }
+    
+    console.log(document.documentElement.clientWidth);
+    
+}
+ 
 
 
 for (const iterator of tg) {
@@ -175,10 +188,8 @@ for (const iterator of ideas_item_img) {
 if (shadow_next) {
     
     shadow_next.addEventListener('mouseout', (event) => {
-        event.target.parentElement.firstElementChild.style.display = 'none';
-    
+        event.target.parentElement.children[2].style.display = 'none';
         event.target.style.display = 'none';
-    
     })
 
 }
@@ -188,8 +199,7 @@ if (shadow_next) {
 
 for (const iterator of shadow) {
     iterator.addEventListener('mouseout', (event) => {
-        event.target.parentElement.firstElementChild.style.display = 'none';
-
+        event.target.parentElement.children[2].style.display = 'none';
         event.target.style.display = 'none';
 
     })
