@@ -15,6 +15,9 @@ let input_tg = document.querySelectorAll('.input_tg')
 const tel = document.querySelector('.tel');
 let tg = document.querySelectorAll('#tg')
 let art = document.querySelector('.art')
+let link = document.querySelectorAll('.link')
+let link_close = document.querySelectorAll('.link_close')
+let shadow_next_click = document.querySelectorAll('.shadow_next_click')
 
 const TOKEN = '6234678894:AAEjs2mhQVH72DYnB8s3yFH1_UqnOJDXNFI'
 const CHAT_ID = '-1001836814367'
@@ -91,7 +94,22 @@ feedback_img.addEventListener('click', () => {
 image_filter.addEventListener('click', () => {
     feedback.classList.remove('active')
     image_filter.classList.remove('active')
+    for (const iterator of link) {
+        iterator.classList.remove('active')
+    }
+
 })
+
+for (const iterator of link_close) {
+    iterator.addEventListener('click', () => {
+        feedback.classList.remove('active')
+        image_filter.classList.remove('active')
+        for (const iterator of link) {
+            iterator.classList.remove('active')
+        }
+    
+    })
+}
 
 for (const iterator of services_item_wrap) {
     iterator.addEventListener('mouseover', () => {
@@ -135,10 +153,17 @@ for (const iterator of ideas_item_img) {
 }
 
 if (shadow_next) {
-
     shadow_next.addEventListener('mouseout', (event) => {
         event.target.parentElement.children[2].style.display = 'none';
         event.target.style.display = 'none';
+    })
+}
+
+for (const iterator of shadow_next_click) {
+    iterator.addEventListener('click', (event) => {
+        image_filter.classList.add('active')
+        let simkins = document.querySelector('.simkins')
+        simkins.classList.add('active')
     })
 }
 
@@ -146,6 +171,14 @@ for (const iterator of shadow) {
     iterator.addEventListener('mouseout', (event) => {
         event.target.parentElement.children[2].style.display = 'none';
         event.target.style.display = 'none';
+    })
+
+    iterator.addEventListener('click', (event) => {
+        console.log(event.target.classList[1]);
+        let classTemp = event.target.classList[1]
+        let classAdd = document.querySelectorAll(`.${classTemp}`)[1]
+        image_filter.classList.add('active')
+        classAdd.classList.add('active')
     })
 }
 
@@ -158,7 +191,6 @@ heading_burger.addEventListener('click', () => {
 
     let arr = document.querySelectorAll('img')
     arr.forEach((element, index) => {
-
         element.classList.toggle(`${classArr[index]}`)
         element.classList.toggle(`${classArr_revers[index]}`)
     });

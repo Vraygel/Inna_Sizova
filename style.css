@@ -64,10 +64,37 @@ html {
     background-color: #F7F8FC;
 }
 
+.slash_slogan{
+    display: none;
+}
+
+.link {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 1160px;
+    overflow: scroll;
+    z-index: 20;
+    top: 3vw;
+    left: calc(50% - 580px);
+}
+
+.link img {
+    width: 100%;
+}
+
+.link_close{
+    position: fixed;
+    top: 0;
+    color: #ffffff;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+
 .header {
     width: 1160px;
     margin: 0 auto;
-
     position: relative;
 }
 
@@ -284,7 +311,7 @@ html {
 .slogan {
     display: flex;
     align-items: center;
-    width: 540px;
+    width: 821px;
     font-family: 'Montserrat700';
     font-style: normal;
     font-weight: 700;
@@ -293,6 +320,11 @@ html {
     color: #000000;
     margin-bottom: auto;
 }
+
+.slogan .slash_p{
+    padding-top: 0px;
+}
+
 
 .slogan img {
     width: 100%;
@@ -420,7 +452,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0px 12px 12px -12px rgb(12 12 13 / 21%), 0px -12px 12px -12px rgb(12 12 13 / 21%);
-    margin-top: 150px;
+    margin-top: 33px;
 }
 
 .services_h1 {
@@ -518,6 +550,9 @@ html {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    border-top: 1px solid #C2BA95;
+    border-bottom: 1px solid #C2BA95;
+    margin-bottom: 100px;
 }
 
 .img_wrap {
@@ -981,6 +1016,7 @@ footer {
     font-size: 16px;
     line-height: 136.4%;
     color: #0F0F0F;
+    margin-top: 30px;
 }
 
 .websiteDesign_span {
@@ -1164,6 +1200,7 @@ footer {
 }
 
 .nameInfo_text p {
+    width: 391px;
     font-family: 'Montserrat300';
     font-style: normal;
     font-weight: 300;
@@ -1757,15 +1794,7 @@ footer {
     display: none;
 }
 
-.link {
-    width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.link img {
-    width: 100%;
-}
 
 .image_filter {
     display: none;
@@ -1788,7 +1817,7 @@ footer {
 .feedback_container {
     background-color: #F7F8FC;
     position: fixed;
-    top: 10px;
+    top: calc(50% - 390px);
     left: calc(50% - 195px);
     right: auto;
     z-index: 20;
@@ -1799,10 +1828,18 @@ footer {
     padding-bottom: 62px;
 }
 
+.feedback_container a:link,
+.feedback_container a:visited,
+.feedback_container a:hover,
+.feedback_container a:active {
+color: #0F0F0F;
+}
+
 .feedback_close {
     width: 100%;
     text-align: right;
     margin-bottom: 32px;
+    line-height: 0;
 }
 
 .feedback_img {
@@ -1852,6 +1889,7 @@ footer {
     padding-right: 0px;
     padding-bottom: 31px;
     width: 100%;
+    height: 163px;
     border-radius: 5px;
     border: 0;
     margin-bottom: 30px;
@@ -1983,6 +2021,10 @@ ol {
 
 .navMobile {
     display: none;
+}
+
+.form_tg .feedback_button{
+    border-radius: 0;
 }
 
 @keyframes menu {
@@ -2236,8 +2278,11 @@ ol {
     }
 
     .link {
+        
+        left: calc(50% - 47.5vw);
         width: 95.0000vw;
     }
+    
 
     .feedback_img {
         width: 2.7586vw;
@@ -2341,13 +2386,13 @@ ol {
     }
 
     .slogan {
-        width: 46.5517vw;
+        width: 70.7759vw;;
         font-size: 2.1552vw;
     }
 
     .discount {
-        padding-left: 4.3103vw;
-        padding-right: 4.3103vw;
+        padding-left: 3.8103vw;
+        padding-right: 3.8103vw;
         padding-top: 4.3103vw;
         padding-bottom: 2.7586vw;
         border: 0.0862vw solid #C2BA95;
@@ -2416,7 +2461,7 @@ ol {
     .services {
         height: 33.9655vw;
         box-shadow: 0.0000vw 1.0345vw 1.0345vw -1.0345vw rgb(12 12 13 / 21%), 0.0000vw -1.0345vw 1.0345vw -1.0345vw rgb(12 12 13 / 21%);
-        margin-top: 12.9310vw;
+        margin-top: 2.8448vw;
     }
 
     .services_item {
@@ -2469,6 +2514,7 @@ ol {
         padding-top: 7.5000vw;
         padding-bottom: 8.6207vw;
         border-bottom: 0.0862vw solid #C2BA95;
+        margin-bottom: 8.6207vw;
     }
 
     .img img {
@@ -2761,6 +2807,7 @@ ol {
     }
 
     .nameInfo_text p {
+        width: 33.7069vw;
         font-size: 1.3793vw;
     }
 
@@ -3084,7 +3131,7 @@ ol {
     }
 
     .feedback_container {
-        top: 0.8621vw;
+        top: calc(50% - 33.6207vw);
         left: calc(50% - 16.8103vw);
         width: 33.6207vw;
         padding-left: 1.8103vw;
@@ -3123,6 +3170,7 @@ ol {
     }
 
     .feedback_form textarea {
+        height: 14.0517vw;
         padding-left: 2.5862vw;
         padding-top: 2.6724vw;
         padding-right: 0.0000vw;
@@ -3165,6 +3213,10 @@ ol {
         margin-block-end: 1.7241vw;
         margin-inline-start: 1.7241vw;
     }
+
+    .form_tg .feedback_button{
+        border-radius: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -3204,6 +3256,14 @@ ol {
 }
 
 @media (max-width: 768px) {
+
+    .form_tg .feedback_button{
+        border-radius: 0;
+    }
+
+.slash_slogan{
+    display: block;
+}
 
     .heading_burger {
         display: block;
@@ -4165,6 +4225,7 @@ ol {
         background-repeat: no-repeat;
         background-size: cover;
         text-align: center;
+        overflow: hidden;
     }
 
     .artImg img {
@@ -4207,15 +4268,13 @@ ol {
     }
 
     .nameInfo_text p {
+        width: 100%;
         font-family: 'Montserrat400';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 136.4%;
         color: #FFFFFF;
-    }
-
-    .nameInfo_text p {
         padding-left: 40px;
         padding-top: 30px;
         padding-right: 19px;
@@ -4278,6 +4337,7 @@ ol {
         font-size: 14px;
         line-height: 136.4%;
         color: #ffffff;
+        border-bottom: 1px solid #C2BA95;
     }
 
     .art18_wrap_mob button {
@@ -5490,6 +5550,7 @@ ol {
     }
 
     .feedback_form textarea {
+        height: 45.2778vw;
         padding-left: 8.3333vw;
         padding-top: 8.6111vw;
         padding-right: 0.0000vw;
